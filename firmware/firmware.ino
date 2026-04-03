@@ -46,6 +46,24 @@ void setup() {
 }
 
 void loop() {
+  uint16_t rtd = thermo.readRTD();
+
+  Serial.print("RTD value: "); 
+  Serial.println(rtd);
+
+  float ratio = rtd;
+  ratio /= 32768;
+
+  Serial.print("Ratio = "); 
+  Serial.println(ratio,8);
+
+  Serial.print("Resistance = "); 
+  Serial.println(RREF*ratio,8);
+
+  float temp = thermo.temperature(RNOMINAL, RREF) - TEMP_OFFSET;
+  Serial.print("Temperature = "); 
+  Serial.println(temp); 
+
   float temp = thermo.temperature(RNOMINAL, RREF) - TEMP_OFFSET;
 
   // Print to OLED

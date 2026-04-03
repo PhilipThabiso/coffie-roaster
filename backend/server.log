@@ -419,3 +419,10 @@
 {"time":"2026-04-03T20:09:52.484555538+02:00","level":"INFO","msg":"reading saved","temp":19.46,"remote":"192.168.1.163:62561"}
 {"time":"2026-04-03T20:09:57.595711599+02:00","level":"INFO","msg":"reading saved","temp":19.43,"remote":"192.168.1.163:50141"}
 {"time":"2026-04-03T20:10:02.732169875+02:00","level":"INFO","msg":"reading saved","temp":19.46,"remote":"192.168.1.163:49676"}
+{"time":"2026-04-03T20:10:07.847122642+02:00","level":"INFO","msg":"reading saved","temp":19.49,"remote":"192.168.1.163:50902"}
+{"time":"2026-04-03T20:10:12.978980751+02:00","level":"INFO","msg":"reading saved","temp":19.49,"remote":"192.168.1.163:60874"}
+{"time":"2026-04-03T20:10:18.146754894+02:00","level":"INFO","msg":"reading saved","temp":18.76,"remote":"192.168.1.163:53078"}
+{"time":"2026-04-03T20:10:23.261770928+02:00","level":"INFO","msg":"reading saved","temp":19.49,"remote":"192.168.1.163:63496"}
+{"time":"2026-04-03T20:10:28.399764099+02:00","level":"INFO","msg":"reading saved","temp":19.49,"remote":"192.168.1.163:57445"}
+{"time":"2026-04-03T20:10:33.516103277+02:00","level":"INFO","msg":"reading saved","temp":19.49,"remote":"192.168.1.163:51775"}
+{"time":"2026-04-03T20:10:38.626484971+02:00","level":"INFO","msg":"reading saved","temp":19.53,"remote":"192.168.1.163:53060"}

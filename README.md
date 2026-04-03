@@ -13,3 +13,5 @@ arduino-cli monitor -p /dev/ttyUSB0 -c baudrate=115200
 
 arduino-cli compile --upload -p /dev/ttyUSB0 \
   --fqbn esp8266:esp8266:generic ~/proj/coffie-roaster/firmware
+
+arduino-cli lib install "Adafruit MAX31865 library"

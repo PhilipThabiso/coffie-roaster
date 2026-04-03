@@ -19,7 +19,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Thermo setup
 Adafruit_MAX31865 thermo(16);
-#define TEMP_OFFSET 5.0
+#define TEMP_OFFSET 0.0
 #define RREF      427.0
 #define RNOMINAL  100.0
 

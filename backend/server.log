@@ -417,3 +417,5 @@
 {"time":"2026-04-03T20:09:42.252074498+02:00","level":"INFO","msg":"reading saved","temp":19.43,"remote":"192.168.1.163:54238"}
 {"time":"2026-04-03T20:09:47.366255084+02:00","level":"INFO","msg":"reading saved","temp":19.43,"remote":"192.168.1.163:60318"}
 {"time":"2026-04-03T20:09:52.484555538+02:00","level":"INFO","msg":"reading saved","temp":19.46,"remote":"192.168.1.163:62561"}
+{"time":"2026-04-03T20:09:57.595711599+02:00","level":"INFO","msg":"reading saved","temp":19.43,"remote":"192.168.1.163:50141"}
+{"time":"2026-04-03T20:10:02.732169875+02:00","level":"INFO","msg":"reading saved","temp":19.46,"remote":"192.168.1.163:49676"}

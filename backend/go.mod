@@ -1,4 +1,4 @@
-module coffie-roaster
+module github.com/PhilipThabiso/coffie-roaster
 
 go 1.26.1
 

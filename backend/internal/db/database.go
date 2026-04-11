@@ -1,4 +1,4 @@
-package main
+package db
 
 import (
 	"database/sql"
@@ -6,11 +6,11 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-var db *sql.DB
+var DB *sql.DB
 
-func initDB() error {
+func InitDB() error {
 	var err error
-	db, err = sql.Open("sqlite", "./data.db")
+	DB, err = sql.Open("sqlite", "./data.db")
 	if err != nil {
 		return err
 	}
@@ -22,11 +22,11 @@ func initDB() error {
 		timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 	);`
 
-	_, err = db.Exec(query)
+	_, err = DB.Exec(query)
 	return err
 }
 
-func saveReading(temp float64) error {
-	_, err := db.Exec("INSERT INTO temperatures (value) VALUES (?)", temp)
+func SaveReading(temp float64) error {
+	_, err := DB.Exec("INSERT INTO temperatures (value) VALUES (?)", temp)
 	return err
 }

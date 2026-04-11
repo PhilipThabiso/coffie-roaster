@@ -2,43 +2,32 @@ package main
 
 import (
 	"log"
-	"log/slog"
 	"net/http"
 	"os"
+
+	"github.com/PhilipThabiso/coffie-roaster/internal/api"
+	"github.com/PhilipThabiso/coffie-roaster/internal/db"
+	"github.com/PhilipThabiso/coffie-roaster/logger"
 )
 
-var logger *slog.Logger
-
-func initLogger() (*os.File, error) {
-	file, err := os.OpenFile("server.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o666)
-	if err != nil {
-		return nil, err
-	}
-
-	// Create JSON handler writing to the file
-	handler := slog.NewJSONHandler(file, nil)
-	logger = slog.New(handler)
-	return file, nil
-}
-
 func main() {
-	logFile, err := initLogger()
+	logFile, err := logger.Init()
 	if err != nil {
-		log.Fatal("failed to init logger:", err)
+		log.Fatal("failed to init logger.log:", err)
 	}
 	defer logFile.Close()
 
-	if err := initDB(); err != nil {
-		logger.Error("db init failure", "error", err.Error())
+	if err := db.InitDB(); err != nil {
+		logger.Log.Error("db init failure", "error", err.Error())
 		os.Exit(1)
 	}
-	defer db.Close()
+	defer db.DB.Close()
 
-	http.HandleFunc("/log", tempHandler)
+	http.HandleFunc("/log", api.TempHandler)
 
-	logger.Info("server starting", "port", 8080)
+	logger.Log.Info("server starting", "port", 8080)
 	if err := http.ListenAndServe("192.168.1.248:8080", nil); err != nil {
-		logger.Error("server crash", "error", err.Error())
+		logger.Log.Error("server crash", "error", err.Error())
 		os.Exit(1)
 	}
 }
